@@ -4,25 +4,35 @@
   <meta charset="UTF-8" />
   <title>Solana Wallet Vibe Agent</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Solana Wallet Vibe Agent</h1>
-    <p>Enter a Solana wallet address to analyze its vibe.</p>
+  <div class="bg-blur"></div>
+
+  <main class="card">
+    <h1>Solana Wallet Vibe</h1>
+    <p class="subtitle">
+      AI agent that reads wallet behavior and explains it like a human.
+    </p>
 
     <input
       type="text"
       id="walletInput"
-      placeholder="Enter wallet address"
+      placeholder="Enter Solana wallet address"
     />
 
     <button onclick="analyzeWallet()">Analyze Wallet</button>
 
-    <div id="output"></div>
-  </div>
+    <div id="output" class="output"></div>
+
+    <footer>
+      Built for Solana Agent Hackathon
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
