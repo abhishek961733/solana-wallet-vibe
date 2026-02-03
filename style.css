@@ -1,28 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Solana Wallet Vibe Agent</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
 
-  <div class="container">
-    <h1>Solana Wallet Vibe Agent</h1>
-    <p>Enter a Solana wallet address to analyze its vibe.</p>
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  background: #020617;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
 
-    <input
-      type="text"
-      id="walletInput"
-      placeholder="Enter wallet address"
-    />
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 6px;
+  border: none;
+}
 
-    <button onclick="analyzeWallet()">Analyze Wallet</button>
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #22c55e;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    <div id="output"></div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+#output {
+  margin-top: 20px;
+  text-align: left;
+  white-space: pre-line;
+}
 
