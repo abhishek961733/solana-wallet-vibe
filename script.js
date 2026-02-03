@@ -3,43 +3,44 @@ function analyzeWallet() {
   const output = document.getElementById("output");
 
   if (!wallet) {
-    output.innerText = "❌ Please enter a wallet address.";
+    output.innerText = "⚠️ Please enter a Solana wallet address.";
     return;
   }
 
-  output.innerText = "🔍 Analyzing wallet vibe...";
+  output.innerText = "🔍 Reading wallet behavior...\nPlease wait.";
 
-  // ---- VIBE DATA (mock for now) ----
-  const avgHoldDays = Math.floor(Math.random() * 7);
-  const tokenCount = Math.floor(Math.random() * 10) + 1;
-  const memeExposure = Math.floor(Math.random() * 100);
+  // Mock behavior signals (agent-style)
+  const activity = Math.random();
+  const diversity = Math.random();
+  const patience = Math.random();
 
-  let vibe = "Balanced 😎";
-  let risk = "Medium";
+  let vibe, risk, verdict;
 
-  if (avgHoldDays < 2 && memeExposure > 60) {
-    vibe = "Degen 🎰";
+  if (activity > 0.7 && diversity > 0.6) {
+    vibe = "High-Risk Degen 🎰";
     risk = "High";
-  } else if (tokenCount <= 2) {
-    vibe = "Holder 🧘";
+    verdict = "Avoid copy-trading. This wallet shows aggressive behavior.";
+  } else if (patience > 0.7) {
+    vibe = "Long-Term Holder 🧘";
     risk = "Low";
-  } else if (avgHoldDays < 4) {
+    verdict = "Stable behavior. Suitable for conservative strategies.";
+  } else {
     vibe = "Active Trader ⚡";
     risk = "Medium";
+    verdict = "Moderate risk. Observe before taking action.";
   }
 
   output.innerText = `
 Wallet Vibe: ${vibe}
 
-Stats:
-• Average Holding Days: ${avgHoldDays}
-• Token Count: ${tokenCount}
-• Meme Exposure: ${memeExposure}%
+Behavior Analysis:
+• Trading Activity: ${activity.toFixed(2)}
+• Token Diversity: ${diversity.toFixed(2)}
+• Holding Patience: ${patience.toFixed(2)}
 
 Risk Level: ${risk}
 
-Advice:
-${risk === "High" ? "Not recommended for copy trading." : "Relatively stable wallet behavior."}
+Agent Verdict:
+${verdict}
 `;
 }
-
